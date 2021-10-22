@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+var a = "fsdf"
+
 func main() {
 	ch := make(chan int)
 
@@ -15,11 +17,11 @@ func main() {
 	// 2й способ чтения из канала
 	for {
 		n, ok := <-ch
-		fmt.Println(n, ok)
-
 		if !ok {
 			break
 		}
+
+		fmt.Println(n, ok)
 	}
 }
 
