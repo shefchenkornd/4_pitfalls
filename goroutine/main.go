@@ -7,6 +7,13 @@ var a = "fsdf"
 func main() {
 	ch := make(chan int)
 
+	for i := 1; i < 10; i++{
+		for j := 1; j < 10; j++{
+			fmt.Print(i * j, "\t")
+		}
+		fmt.Println()
+	}
+
 	go generateNumbers(5, ch)
 
 	// 1й способ чтения из канала
