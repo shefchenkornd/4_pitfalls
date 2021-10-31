@@ -8,7 +8,8 @@ import "fmt"
 cannot use (*repo)(nil) (type *repo) as type Repo in assignment:
 	*repo does not implement Repo (missing UpdateUser method)
  */
-var _ Repo = (*repo)(nil)
+var _ Repo = &repo{} // or ↓
+//var _ Repo = (*repo)(nil)
 
 type User struct {
 	ID string
