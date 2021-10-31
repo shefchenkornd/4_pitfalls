@@ -2,7 +2,9 @@ package main
 
 import "testing"
 
-// 65 ns/op
+// чтобы запустить бенчмарк используй команду: `go test -bench=.`
+
+// 92.66 ns/op
 func Benchmark_cBytes(b *testing.B) {
 	b.ResetTimer()
 	for n := 0; n < b.N; n++ {
@@ -12,7 +14,7 @@ func Benchmark_cBytes(b *testing.B) {
 	b.StopTimer()
 }
 
-// 99 ns/op
+// 129.7 ns/op
 func Benchmark_cPlus(b *testing.B) {
 	b.ResetTimer()
 	for n := 0; n < b.N; n++ {
@@ -22,7 +24,7 @@ func Benchmark_cPlus(b *testing.B) {
 	b.StopTimer()
 }
 
-// 78 ns/op
+// 100.3 ns/op
 func Benchmark_cStrings(b *testing.B) {
 	b.ResetTimer()
 	for n := 0; n < b.N; n++ {
@@ -33,7 +35,7 @@ func Benchmark_cStrings(b *testing.B) {
 }
 
 
-// 50 ns/op
+// 67.57 ns/op
 func Benchmark_cCopy(b *testing.B) {
 	b.ResetTimer()
 	for n := 0; n < b.N; n++ {

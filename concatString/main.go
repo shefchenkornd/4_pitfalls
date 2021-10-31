@@ -19,7 +19,6 @@ func cCopy(args []string) string {
 	lenB := make([]byte, len(args)*len(args[0]))
 	offset := 0
 	for _, str := range args {
-		fmt.Println(offset)
 		offset += copy(lenB[offset:], str)
 	}
 
