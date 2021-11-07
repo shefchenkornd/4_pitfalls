@@ -2,6 +2,10 @@ package db
 
 import "fmt"
 
-func HelloDb() {
-	fmt.Println("I'm DB package")
+var (
+	NameDb, Connect = "Postgress", 0
+)
+
+func HelloDatabase() {
+	fmt.Println("I'm Database function")
 }

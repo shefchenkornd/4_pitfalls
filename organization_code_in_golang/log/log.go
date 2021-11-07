@@ -1,5 +1,7 @@
-package main
+package log
 
-func main() {
-	$END$
+import "fmt"
+
+func HelloLog() {
+	fmt.Println("I'm LOG package")
 }

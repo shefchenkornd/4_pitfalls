@@ -1,5 +1,7 @@
-package main
+package db
 
-func main() {
-	$END$
+import "fmt"
+
+func HelloDb() {
+	fmt.Println("I'm DB package")
 }
