@@ -35,8 +35,8 @@ func main() {
 		fmt.Println("Response from service 1", res)
 	case res := <-chan2:
 		fmt.Println("Response from service 2", res)
-	default:
-		fmt.Println("No response received") // выведется вот эта строка, НО Я ПОКА ЧТО не знаю почему
+		fmt.Println("No response received") // выведется вот эта строка!
 	}
 }
-// Answer: выведется следующий текст "No response received"
+// Answer: выведется следующий текст "No response received", тк, если бы не было default, то был либо ответ 1 либо 2.
+// default в select{} делает его неблокирующим поток main
