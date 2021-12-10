@@ -13,7 +13,6 @@ type Rect struct {
 }
 
 func (r *Rect) Area() float64 {
-	fmt.Println(r)
 	return r.width * r.height
 }
 
@@ -30,4 +29,4 @@ func main() {
 	area := s.Area()
 	fmt.Println(area) // error
 }
-// Compile-time error: Rect does not implement Shape (Area method has pointer receiver)
+// Answer: Compile-time error: Rect does not implement Shape (Area method has pointer receiver)
