@@ -6,6 +6,7 @@ func service() {
 	fmt.Println("Hello from service")
 }
 
+// what is the output of the following program?
 func main() {
 	fmt.Println("main() started")
 

@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+// Consider the following code:
+// what is the output of the following program?
 func main() {
 	s := "123"
 	ps := &s         // 0xc000010230
