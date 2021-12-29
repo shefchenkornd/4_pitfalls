@@ -21,6 +21,7 @@ func drive(v Vehicle)  {
 	v.move()
 }
 
+// Полиморфизм на примере имплементации метода интерфейса и структур
 func main() {
 	vesta := Car{}
 	vesta.move()

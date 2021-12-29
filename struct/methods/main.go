@@ -4,9 +4,7 @@ import "fmt"
 
 type library []string
 
-type I interface {
-
-}
+type I interface {}
 
 func (l library) print()  {
 	for _, book := range l {

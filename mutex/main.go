@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-var counter int = 0 //  общий ресурс
+var counter int = 0 // Общий ресурс
 
 /**
 На уровне кода мьютекс представляет тип sync.Mutex.

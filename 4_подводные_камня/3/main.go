@@ -20,6 +20,8 @@ func (ms MyStruct) PrintNameMethod() {
 
 Надо обновить получатель, чтобы он получал указатель на структуру:
 */
+
+//UpdateNameMethod ...
 func (ms *MyStruct) UpdateNameMethod(newName string) {
 	ms.Name = newName
 }
