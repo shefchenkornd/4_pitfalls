@@ -25,3 +25,4 @@
 24. sync.WaitGroup
 25. backend tests
 26. переключатель типов (type switch)
+27. Многомерные слайсы и массивы
