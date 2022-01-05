@@ -1,14 +1,32 @@
 package main
 
 import (
-	"fmt"
 	"runtime"
+	"time"
 )
 
-// The GOMAXPROCS variable limits the number of operating system threads that can execute user-level Go code simultaneously.
+var _ = runtime.GOMAXPROCS(3)
+
+var a, b int
+
+func u1() {
+	a = 1
+	b = 2
+}
+
+func u2() {
+	a = 3
+	b = 4
+}
+
+func p() {
+	println(a)
+	println(b)
+}
+
 func main() {
-	fmt.Println(runtime.GOMAXPROCS(-1)) // выводит: 8 (1 on play.golang.org)
-	fmt.Println(runtime.NumCPU())       // выводит: 8 (1 on play.golang.org)
-	runtime.GOMAXPROCS(20)
-	fmt.Println(runtime.GOMAXPROCS(-1)) // выводит: 20
+	go u1()
+	go u2()
+	go p()
+	time.Sleep(1 * time.Second)
 }
