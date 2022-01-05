@@ -39,3 +39,4 @@
 38. Как выбраться из кодовых блоков for switch и for select с помощью метки
 39. Итерационные переменные и замыкания в выражениях for
 40. Вычисление аргумента блока defer (Deferred Function Call Argument Evaluation)
+41. Вызов блока defer в цикле FOR{}
