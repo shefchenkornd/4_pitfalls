@@ -30,4 +30,10 @@ func main() {
 		count,
 		b[:count],
 	)
+
+	dir, err := os.UserHomeDir()
+	if err != nil {
+		log.Fatalln(err)
+	}
+	fmt.Println("Home directory for particular user:", dir)
 }
