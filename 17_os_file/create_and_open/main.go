@@ -5,6 +5,7 @@ import (
 	"io"
 	"log"
 	"os"
+	"path/filepath"
 )
 
 func main() {
@@ -36,4 +37,6 @@ func main() {
 		log.Fatalln(err)
 	}
 	fmt.Println("Home directory for particular user:", dir)
+
+	fmt.Println("New path to directory:", filepath.Join(dir, "a/b/c"))
 }
