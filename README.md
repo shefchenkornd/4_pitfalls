@@ -58,3 +58,7 @@
     2. A receive from a nil channel blocks forever
     3. A send to a closed channel panics
     4. A receive from a closed channel returns the zero value immediately
+    5. Can't close nil channel will panics
+48. Curious Channels by Dave Cheney
+    1. A closed channel never blocks
+    2. 
