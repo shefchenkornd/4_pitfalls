@@ -53,3 +53,8 @@
 44. GOMAXPROCS, согласованность (concurrency) и параллелизм
 45. Изменение порядка операций чтения и записи в горутинах
 46. Разбираемся с пакетом Context в Golang
+47. Channel Axioms by Dave Cheney
+    1. A send to a nil channel blocks forever
+    2. A receive from a nil channel blocks forever
+    3. A send to a closed channel panics
+    4. A receive from a closed channel returns the zero value immediately
