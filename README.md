@@ -61,4 +61,4 @@
     5. Can't close nil channel will panics
 48. Curious Channels by Dave Cheney
     1. A closed channel never blocks
-    2. 
+    2. A nil channel always blocks; каналу можно присвоить nil значение
