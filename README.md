@@ -62,3 +62,9 @@
 48. Curious Channels by Dave Cheney
     1. A closed channel never blocks
     2. A nil channel always blocks; каналу можно присвоить nil значение
+49. Strings, bytes, runes and characters in Go:
+    1. strings
+    2. utf-8 and string literals
+    3. code points and rune
+    4. for range loop
+50. Decode (unmarshal) JSON to struct
