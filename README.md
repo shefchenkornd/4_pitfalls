@@ -69,4 +69,4 @@
     4. for range loop
 50. Decode (unmarshal) JSON to struct
 51. Decode (unmarshal) JSON to map
-52. Code (marshal) struct to JSON
+52. Marshal struct to JSON file
