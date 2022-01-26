@@ -68,3 +68,4 @@
     3. code points and rune
     4. for range loop
 50. Decode (unmarshal) JSON to struct
+51. Decode (unmarshal) JSON to map
