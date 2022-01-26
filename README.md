@@ -70,3 +70,4 @@
 50. Decode (unmarshal) JSON to struct
 51. Decode (unmarshal) JSON to map
 52. Marshal struct to JSON file
+53. Reset slice
