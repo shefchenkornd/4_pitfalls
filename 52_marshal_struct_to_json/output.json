@@ -1,0 +1,9 @@
+{
+	"name": "Bob",
+	"scient_id": 1,
+	"is_working": true,
+	"university": {
+		"name": "MTSU",
+		"city": "Rostov-on-Don"
+	}
+}
