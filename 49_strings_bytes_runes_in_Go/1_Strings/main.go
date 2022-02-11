@@ -7,7 +7,7 @@ const sample = "\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98"
 // In Go, a string is in effect a read-only slice of bytes.
 // As we saw, indexing a string yields its bytes, not its characters: a string is just a bunch of bytes.
 //
-// In fact, the definition of “character” is ambiguous and it would be a mistake to try to resolve the ambiguity by defining that strings are made of characters
+// In fact, the definition of “character” is ambiguous, and it would be a mistake to try to resolve the ambiguity by defining that strings are made of characters
 func main() {
 	const sample = "\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98"
 

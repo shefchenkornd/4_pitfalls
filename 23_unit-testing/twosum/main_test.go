@@ -25,6 +25,8 @@ func TestTwoSum(t *testing.T) {
 
 	for _, cs := range cases {
 		t.Run("twoSum", func(t *testing.T) {
+			t.Parallel() // этот тест должен выполняться параллельно с (и только с) другими параллельными тестами.
+
 			got := twoSum(cs.nums, cs.target)
 			assert.Equal(t, cs.want, got)
 		})
