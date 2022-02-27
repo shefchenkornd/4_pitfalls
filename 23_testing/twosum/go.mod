@@ -1,4 +1,4 @@
-module twosum
+module twosun
 
 go 1.17
 

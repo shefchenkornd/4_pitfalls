@@ -30,7 +30,8 @@ func main() {
 
 	sliceByte1 := []byte{'G', 'E', 'E', 'K', 'S'}
 	sliceByte2 := []byte{'G', 'E', 'e', 'K', 'S'}
-	// fmt.Println(slice_byte_1 == slice_byte_2) 	// Сравнивать slice of byte напрямую нельзя!
+	// Сравнивать slice of byte напрямую нельзя!
+	// fmt.Println(sliceByte1 == sliceByte2) // Error: "Invalid operation: sliceByte1 == sliceByte2 (the operator == is not defined on []byte)"
 
 	// Using Compare function
 	res := bytes.Compare(sliceByte1, sliceByte2)
