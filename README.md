@@ -84,3 +84,13 @@
 53. Simple HTTP Server
 54. How To Use Dates and Times in Golang
 55. Copy map
+57. Reverse string
+58. Summation
+59. Find the next perfect square root | sqrt(n)
+60. Write a function that returns both the minimum and maximum number of the given list/array.
+61. Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+62. Your task is to sort a given string.
+63. Such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. For example:
+64. Max consecutive strings.
+
+67. Build a pyramid-shaped tower, as an array/list of strings, given a positive integer number of floors. A tower block is represented with "*" character.
