@@ -10,7 +10,6 @@ func main() {
 
 	for i := range data {
 		data[i] += 10
-
 	}
 
 	fmt.Println(data) // [11 12 13 14 15]

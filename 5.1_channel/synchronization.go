@@ -4,10 +4,10 @@ import "fmt"
 
 func main() {
 	results := make(map[int]int)
-	ch := make(chan struct{})
+	sync := make(chan struct{})
 
-	go factorials(5, ch, results)
-	<-ch
+	go factorials(5, sync, results)
+	<-sync
 
 	for i, v := range results{
 		fmt.Println(i, " - ", v)
@@ -15,8 +15,8 @@ func main() {
 }
 
 
-func factorials(n int, ch chan struct{}, results map[int]int){
-	defer close(ch)     // закрываем канал после завершения горутины
+func factorials(n int, sync chan struct{}, results map[int]int){
+	defer close(sync)     // закрываем канал после завершения горутины
 	result := 1
 	for i:=1; i <= n; i++{
 		result *= i

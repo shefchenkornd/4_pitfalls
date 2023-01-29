@@ -7,6 +7,19 @@ import (
 
 // for range loop
 func main() {
+	// Есть только один способ, которым Go обрабатывает UTF-8 специально, а именно при использовании цикла for для строки
+	fmt.Println("Печатаем \"abc\" через цикл for{}")
+	for i, i2 := range "abc" {
+		fmt.Println(i, string(i2))
+	}
+
+	fmt.Println("Печатаем \"абв\" через цикл for{}")
+	for i, i2 := range "абв" {
+		fmt.Println(i, string(i2))
+	}
+	// P.s: обратите внимание, что индексы в обоих циклах выше идут по разному!
+
+
 	const nihongo = "日本語"
 
 	// A for range loop, by contrast, decodes one UTF-8-encoded rune on each iteration.

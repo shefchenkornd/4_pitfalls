@@ -2,25 +2,22 @@ package main
 
 import (
 	"fmt"
+	"unsafe"
 )
 
+// unexpected fault address 0x498bea
+// fatal error: fault
+// [signal SIGSEGV: segmentation violation code=0x2 addr=0x498bea pc=0x480ef4]
 func main() {
-	res := FindOdd([]int{1,1,2})
-	fmt.Println("Result = ", res)
+	// a := "Andrey Berenda" // будет error, который выше
+	a := string([]byte("Andrey Berenda")) // код отработает успешно!
+	fmt.Println(a)
+
+	b := toSlice(a)
+	b[5] = 'i'
+	fmt.Println(a)
 }
 
-func FindOdd(seq []int) int {
-	m :=  make(map[int]int, len(seq))
-	for _, v := range seq {
-		m[v] += 1
-	}
-
-	for key, value := range m {
-		if value % 2 == 1 {
-			return key
-		}
-	}
-
-	//fmt.Println(m)
-	return 0
+func toSlice(a string) []byte {
+	return *(*[]byte)(unsafe.Pointer(&a))
 }

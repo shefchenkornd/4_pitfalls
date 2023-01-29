@@ -7,7 +7,6 @@ type S struct{}
 func f(x interface{}) {}
 
 func g(x *interface{}) {
-
 	fmt.Printf("%T",  x)
 }
 

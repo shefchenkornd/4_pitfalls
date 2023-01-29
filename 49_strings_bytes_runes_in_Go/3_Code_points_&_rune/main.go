@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unicode/utf8"
+)
 
 // “code point”
 //
@@ -17,11 +20,20 @@ import "fmt"
 // “Code point” is a bit of a mouthful, so Go introduces a shorter term for the concept: rune.
 // The term appears in the libraries and source code, and means exactly the same as “code point”, with one interesting addition.
 func main() {
-	// напечает символ
+	// напечатает символ
 	fmt.Println("⌘") // ⌘
 
-	// напечает руну
+
+	// напечатает руну
 	fmt.Println('⌘') // 8984
+
+
+	// 	строчная латинская буква "a" в rune('a') имеет значение 97 (int32 base)
+	//	теперь переводим это из int32 в hex base и получаем 61
+	//	что соответствует кодовой точке Unicode U+0061.
+	fmt.Println(rune('a')) // 97
+	fmt.Printf("%x \n", rune('a')) // 61 или кодовая точка Unicode U+0061
+
 }
 // To summarize, here are the salient points:
 //

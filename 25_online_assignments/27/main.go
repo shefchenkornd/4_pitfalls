@@ -23,12 +23,17 @@ func InitEfacePointer() interface{} {
 
 // Consider the following code:
 func main() {
-	fmt.Println(InitEfacePointer())
+	fmt.Println("InitPointer() == nil | Result:", InitPointer() == nil)
+	fmt.Println("InitEfaceType() == nil | Result:", InitEfaceType() == nil)
+	fmt.Println("InitEfacePointer() == nil | Result:", InitEfacePointer() == nil)
 
-
-	print(InitPointer() == nil, " ")
-	print(InitEfaceType() == nil, " ")
-	print(InitEfacePointer() == nil)
+	fmt.Println()
+	fmt.Printf("%T, %v \n", InitPointer(), InitPointer())
+	fmt.Printf("%T, %v \n", InitEfaceType(), InitEfaceType())
+	fmt.Printf("%T, %v \n", InitEfacePointer(), InitEfacePointer())
 }
 
-// Answer: true false false
+// Answer:
+// InitPointer() == nil | Result: true
+// InitEfaceType() == nil | Result: false
+// InitEfacePointer() == nil | Result: false

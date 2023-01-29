@@ -8,7 +8,7 @@ func main() {
 	for i := 0; i <= 5; i++ {
 		go factorial(i, intCh)
 
-		fmt.Println(<-intCh)
+		fmt.Printf("i = %d, factorial = %d \n", i, <-intCh)
 	}
 }
 

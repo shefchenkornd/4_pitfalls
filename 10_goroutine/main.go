@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-var a = "fsdf"
+var a = "test"
 
 func main() {
 	ch := make(chan int)
@@ -17,9 +17,9 @@ func main() {
 	go generateNumbers(5, ch)
 
 	// 1-й способ чтения из канала
-	//for n := range ch {
-	//	fmt.Println(n)
-	//}
+	// for n := range ch {
+	// 	fmt.Println(n)
+	// }
 
 	// 2-й способ чтения из канала
 	for {

@@ -11,7 +11,7 @@ func (e myError) Error() string {
 }
 
 func run() error {
-	var e *myError
+	var e *myError // var e error
 	if false {
 		e = &myError{code: 123}
 	}
@@ -21,6 +21,8 @@ func run() error {
 // Вопрос по Golang на миллион долларов
 func main() {
 	err := run() // nil
+	// fmt.Printf("%T, %v \n", err, err)
+
 	if err != nil {
 		fmt.Println("failed to run, error", err) // this line code run
 	} else {
@@ -28,7 +30,7 @@ func main() {
 	}
 }
 
-// если на #10 поменять строку:
+// если на #14 поменять строку на:
 // var e error
 // то в консоли выведется:
 // >> success

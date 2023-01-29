@@ -14,7 +14,6 @@ import (
 func main() {
 	var wg sync.WaitGroup
 
-
 	wg.Add(2) // в группе две горутины
 	work := func(id int) {
 		defer wg.Done()

@@ -15,16 +15,6 @@ func main() {
 	fmt.Println(cCopy(params))
 }
 
-func cCopy(args []string) string {
-	lenB := make([]byte, len(args)*len(args[0]))
-	offset := 0
-	for _, str := range args {
-		offset += copy(lenB[offset:], str)
-	}
-
-	return string(lenB[:])
-}
-
 func cPlus(args []string) string {
 	var result string
 
@@ -54,3 +44,14 @@ func cStrings(args []string) string {
 
 	return builder.String()
 }
+
+func cCopy(args []string) string {
+	lenB := make([]byte, len(args)*len(args[0]))
+	offset := 0
+	for _, str := range args {
+		offset += copy(lenB[offset:], str)
+	}
+
+	return string(lenB[:])
+}
+

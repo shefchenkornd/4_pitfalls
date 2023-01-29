@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("main function starts")
+	fmt.Println("Main function starts")
 	intCh := make(chan int)
 
 	go func() {

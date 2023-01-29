@@ -17,5 +17,5 @@ func main() {
 	fmt.Printf("Slice: %v \nLength: %d \nCapacity: %d \nPoint: %p \n", sl, len(sl), cap(sl), sl) // len:0, cap:0, point: 0xc0000b8000
 	fmt.Println()
 
-	// Обратите внимание, ёмкость слайса стала равной 0.
+	// Обратите внимание, что во втором случае (sl = nil) ёмкость слайса стала равной 0.
 }

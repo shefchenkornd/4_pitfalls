@@ -16,13 +16,9 @@ func main() {
 */
 func getImportantVariableValue() string {
 	importantVariable := "Default Value"
-	if functionThatChecksShouldWeUseANoneDefaultValue() {
+	if true {
 		importantVariable := "Non-Default Value"
 		fmt.Printf("Important Variable updated to: %s\n", importantVariable)
 	}
 	return importantVariable
-}
-
-func functionThatChecksShouldWeUseANoneDefaultValue() bool {
-	return true
 }

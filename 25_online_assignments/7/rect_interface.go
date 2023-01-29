@@ -28,5 +28,6 @@ func main() {
 	r := Rect{5.0, 4.0}
 	fmt.Println(s == r) // true
 }
+
 // Answer: потому что переменная `s` имеет тип `main.Rect`
 // и переменная `r` имеет такой же тип `main.Rect

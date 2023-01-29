@@ -20,7 +20,7 @@ func main() {
 	}
 	fmt.Printf("\n")
 
-	fmt.Println("Printf with %x:")
+	fmt.Println("Print with %x:")
 	fmt.Printf("%x\n", sample) // bdb23dbc20e28c98
 
 	// A nice trick is to use the “space” flag in that format, putting a space between the % and the x.

@@ -11,5 +11,5 @@ func main() {
 		}
 		println()
 	}
-	// Answer: put `outer` at 4 line and `break outer` at line 8
+	// Answer: put `outer` at 6 line and `break outer` at line 10
 }

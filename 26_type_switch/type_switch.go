@@ -14,9 +14,8 @@ type Option struct {
 // У Go есть специальная форма переключателя, предназначенная для проверки тип переменной (она называется переключателем типа)
 func main() {
 	var op = &Option{}
-	var i int64 = 64
 
-	params := []interface{}{"abc", 123, i}
+	params := []interface{}{"abc", 123, int64(64)}
 
 	for _, param := range params {
 		fmt.Println(param)

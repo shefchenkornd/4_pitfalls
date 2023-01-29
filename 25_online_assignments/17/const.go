@@ -13,3 +13,4 @@ func main() {
 	fmt.Println(i, j, k)
 }
 // Answer: 7 7 7
+// не путай c ключевым словом iota.

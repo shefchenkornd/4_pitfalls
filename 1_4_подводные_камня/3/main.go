@@ -6,9 +6,9 @@ type MyStruct struct {
 	Name string
 }
 
-//func NewMyStruct(name string) *MyStruct {
-//	return &MyStruct{Name: name}
-//}
+// func NewMyStruct(name string) *MyStruct {
+//	 return &MyStruct{Name: name}
+// }
 
 func (ms MyStruct) PrintNameMethod() {
 	fmt.Println(ms.Name)
@@ -21,7 +21,7 @@ func (ms MyStruct) PrintNameMethod() {
 Надо обновить получатель, чтобы он получал указатель на структуру:
 */
 
-//UpdateNameMethod ...
+// UpdateNameMethod ...
 func (ms *MyStruct) UpdateNameMethod(newName string) {
 	ms.Name = newName
 }
