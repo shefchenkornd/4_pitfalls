@@ -3,9 +3,10 @@ package main
 import "fmt"
 
 // Аргументы для вызовов отложенных функций вычисляются тогда же, когда и выражение defer (а не когда на самом деле выполняется функция).
+// В этом примере выражение «i» вычисляется, когда откладывается вызов Println. Отложенный вызов напечатает «0» после возврата из функции.
 func main() {
-	var i int = 1
+	i := 0
+	defer fmt.Println(i)
 
-	defer fmt.Println("result =>", func() int { return i * 2 }()) // result => 2 (not ok if you expected 4)
 	i++
 }

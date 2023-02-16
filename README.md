@@ -10,28 +10,50 @@
 
 # Оглавление
 
-1. 4 подводных камня на Golang, на которые часто натыкаются
-2. Вопрос по Golang на миллион долларов
+1. Что такое slice?
+2. Подводные камни в Golang, на которые часто натыкаются
 3. Буферизированный ввод-вывод
 4. Приведение типов
 5. Channels
-6. Проверка на имплементацию структуры repo интерфейса Repo
+    1. close
+    2. deadlock
+    3. 
+    4. 
+    5. 
+    6. 
+6. Interface
+    1. проверка Interface
+    2. вложение (embedding)
+    3. полиморфизм на примере имплементации метода interface{} и структур
+    4. interface io.Reader & io.Writer
+    5. сравнение interface{} с nil
+    6. тип interface{} в переменной
 7. Конкатенация строк 4 способа
 8. defer и его принцип работы LIFO (англ. Last In, First Out – «последним пришёл — первым ушёл»)
-9. Неопределенное количество параметров в функции [ставится многоточие: numbers ...int]
+9. Функция
+    1. Неопределенное количество параметров в функции [ставится многоточие: numbers ...int]
+    2. Функция как параметр другой функции
 10. Goroutine: 
     1. reading from a channel
     2. select
-11. Полиморфизм на примере имплементации метода интерфейса и структур
-12. Интерфейс io.Reader & io.Writer
-13. sync.Mutex
-14. net/http packages
-15. Организация кода в Golang
-16. os package
-17. Стандартные потоки вывода в Golang
-19. panic()
+11. sync.Mutex
+    1. Mutex
+    2. Cond
+    3. waitGroup
+    4. Once
+12. net/http packages
+13. Организация кода в Golang
+14. os package
+15. Стандартные потоки вывода в Golang
+16. panic()
     1. простой пример с recovery()
     2. panic() в goroutine
+17. Утечка горутины в заблокированном канале при отсутствии default в select{}
+18. Паттерн «Fan-in» | асинхронный merge каналов
+19. Generics
+    
+
+
 19. Указатели как параметры функции
 20. Struct and nested structs
 21. Именованные типы. Именованный тип основывается на уже существующем типе.
@@ -42,7 +64,7 @@
 24. Прохождение онлайн-заданий на одном из сайтов
 25. переключатель типов (type switch)
 26. Многомерные slices и array
-27. Неизменяемость строк
+27. Неизменяемость строк (смотрите пример с unsafe.Pointer())
 28. Десериализация (unmarshalling) JSON-чисел в интерфейсные значения. По умолчанию Golang обращается с числовыми
     значениями в JSON как с числами float64
 29. Сравнение struct, array, slice и map. Можно использовать оператор эквивалентности == для сравнения переменных
@@ -64,7 +86,7 @@
 42. Обновление полей значений в хеш-таблице
 43. GOMAXPROCS, согласованность (concurrency) и параллелизм
 44. Изменение порядка операций чтения и записи в горутинах
-45. Разбираемся с пакетом Context в Golang
+45. context
 46. Channel Axioms by Dave Cheney
     1. Sending to a nil channel blocks forever
     2. Receiving from a nil channel blocks forever
@@ -96,8 +118,9 @@
 63. Such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. For example:
 64. Max consecutive strings.
 68. Проблема с циклом for{} и pointer'ами
-
 67. Build a pyramid-shaped tower, as an array/list of strings, given a positive integer number of floors. A tower block is represented with "*" character.
-    
-
 70. Список всех типов данных в Golang и их размер в bytes с помощью функции unsafe.Sizeof()
+71. Изменить букву в строке через unsafe.Pointer() 
+72. В языке Go нет наследования — есть только композиция (встраивание)
+73. Написать простенькую реализацию cache используя map[string]string
+74. Тестовое задание

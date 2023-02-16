@@ -16,8 +16,8 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	fmt.Println(result["status"]) // 200
-	fmt.Printf("%T \n", result["status"]) // float64
+	fmt.Println("status:", result["status"]) // 200
+	fmt.Printf("%T \n", result["status"])                // float64
 
 	// Неправильно:
 	var status = result["status"].(int) // ОШИБКА: panic: interface conversion: interface {} is float64, not int
@@ -25,6 +25,6 @@ func main() {
 
 	// Правильно:
 	status2 := uint64(result["status"].(float64))
-	fmt.Println(status2) // 200
-	fmt.Printf("%T \n", status2) // uint64
+	fmt.Println("status2:", status2) // 200
+	fmt.Printf("%T \n", status2)     // uint64
 }

@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"reflect"
 )
 
 type data struct {
@@ -23,24 +24,23 @@ type data struct {
 func main() {
 	v1 := data{}
 	v2 := data{}
-	fmt.Println("v1 == v2:",v1 == v2) // выводит: v1 == v2: true
-
+	fmt.Println("v1 == v2:", v1 == v2) // выводит: v1 == v2: true
 
 	// Compare slice of byte.
 
 	sliceByte1 := []byte{'G', 'E', 'E', 'K', 'S'}
-	sliceByte2 := []byte{'G', 'E', 'e', 'K', 'S'}
+	sliceByte2 := []byte{'G', 'E', 'E', 'K', 'S'}
 	// Сравнивать slice of byte напрямую нельзя!
 	// fmt.Println(sliceByte1 == sliceByte2) // Error: "Invalid operation: sliceByte1 == sliceByte2 (the operator == is not defined on []byte)"
 
 	// Using Compare function
 	res := bytes.Compare(sliceByte1, sliceByte2)
-
 	if res == 0 {
 		fmt.Println("!..Slices are equal..!")
 	} else {
 		fmt.Println("!..Slice are not equal..!") // this is output
 	}
 
-
+	// либо же при помощи
+	fmt.Println("Слайсы равны? ", reflect.DeepEqual(sliceByte1, sliceByte2))
 }

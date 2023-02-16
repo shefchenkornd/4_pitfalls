@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 // С помощью этой конструкции мы проверяем имплементирует ли структура repo интерфейс Repo
-// Если не имплементирует, то получим вот такую ошибку:
+// Если не имплементируют, то получим вот такую ошибку:
 // cannot use (*repo)(nil) (type *repo) as type Repo in assignment:
 //	*repo does not implement Repo (missing UpdateUser method)
 var _ Repo = &repo{} // or ↓
-//var _ Repo = (*repo)(nil)
+// var _ Repo = (*repo)(nil)
 
 type User struct {
 	ID string

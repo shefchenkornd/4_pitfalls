@@ -11,26 +11,28 @@ import (
 // Строки — это байт-слайсы (byte slices), доступные только для чтения. Если вам все-таки нужно обновить строку,
 // то стоит использовать байт-слайс и преобразовывать его в строку по необходимости.
 func main() {
-	a := "abcd"
+	english := "abcd"
 
-	s := []byte(a)
-	s[0] = 65 // <-код большой буквы "A"
-
-	fmt.Println(string(s)) // Abcd
+	byteEnglish := []byte(english)
+	byteEnglish[0] = 65              // Меняем первую букву. 65 - это rune, представление прописной буквы "A"
+	fmt.Println(string(byteEnglish)) // Abcd
+	fmt.Println("_________________________")
 
 	// вот с русскими буквами не знаю как правильно работать
-	b := "абв"
+	rus := "абв"
+	byteRus := []byte(rus)
 
-	u := []byte(b)
+	fmt.Printf("% x", rus)
 
-	for i, r := range b {
-		fmt.Println(i, r, b[i])
+
+	for i, r := range rus {
+		fmt.Println(i, r, rus[i])
 	}
 
-	u[0] = 65 // <-код большой буквы "A"
+	byteRus[0] = 65 // <-код большой буквы "A"
 
 	// todo: узнать как работать с кир
-	fmt.Println(string(u)) // A�бв
+	fmt.Println(string(byteRus)) // A�бв
 
 	// Строки — не всегда текст в кодировке UTF-8
 	data1 := "ABC"
@@ -41,7 +43,7 @@ func main() {
 
 	// Длина строк
 	data3 := "♥"
-	fmt.Println("len:", len(data3)) // выводит: 3 | Встроенная функция len() возвращает не символ, а количество байт
+	fmt.Println("len:", len(data3))                     // выводит: 3 | Встроенная функция len() возвращает не символ, а количество байт
 	fmt.Println("Rune:", utf8.RuneCountInString(data3)) // выводит: 1 | Технически функция RuneCountInString() не возвращает количество символов, потому что один символ может занимать несколько рун
 
 	data4 := "é"
