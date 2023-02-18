@@ -19,5 +19,7 @@ func main() {
 }
 
 func toSlice(a string) []byte {
-	return *(*[]byte)(unsafe.Pointer(&a))
+	return *(*[]byte)(unsafe.Pointer(&a)) // производим так называемое "разыменование"
 }
+// Разыменование:
+// приводим unsafe.Pointer к указателю на нужный нам тип данных и потом берём его значение

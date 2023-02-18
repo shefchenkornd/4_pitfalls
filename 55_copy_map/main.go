@@ -17,17 +17,17 @@ func main() {
 		},
 	}
 
-	fmt.Println(c.Properties)
+	fmt.Println("Original map:", c.Properties)
 
 	copiedMap := make(map[string]string)
 	copiedMap = copyMap(c.Properties, copiedMap)
 
-	fmt.Println(copiedMap)
+	fmt.Println("Copied map:", copiedMap)
 
 	// Попытаемся изменить исходную map, чтобы проверить, что скопированная map осталась неизменной:
 	c.Properties["d"] = "D"
-	fmt.Println(c.Properties)
-	fmt.Println(copiedMap)
+	fmt.Println("Original map:", c.Properties)
+	fmt.Println("Copied map:", copiedMap)
 }
 
 func copyMap(src, dst map[string]string) map[string]string {

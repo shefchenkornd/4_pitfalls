@@ -49,7 +49,7 @@ func Snail(snaipMap [][]int) []int {
 		}
 
 		if len(keys) > 0 {
-			// sort by keys indexes
+			// bubble by keys indexes
 			var slKeys []int
 			for i := range keys {
 				slKeys = append(slKeys, i)

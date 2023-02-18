@@ -11,6 +11,7 @@
 # Оглавление
 
 1. Что такое slice?
+1. Что такое map?
 2. Подводные камни в Golang, на которые часто натыкаются
 3. Буферизированный ввод-вывод
 4. Приведение типов
@@ -115,12 +116,13 @@
 60. Write a function that returns both the minimum and maximum number of the given list/array.
 61. Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
 62. Your task is to sort a given string.
-63. Such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. For example:
-64. Max consecutive strings.
 68. Проблема с циклом for{} и pointer'ами
 67. Build a pyramid-shaped tower, as an array/list of strings, given a positive integer number of floors. A tower block is represented with "*" character.
 70. Список всех типов данных в Golang и их размер в bytes с помощью функции unsafe.Sizeof()
-71. Изменить букву в строке через unsafe.Pointer() 
+71. Изменить букву в строке через unsafe.Pointer() используя "разыменование"
 72. В языке Go нет наследования — есть только композиция (встраивание)
 73. Написать простенькую реализацию cache используя map[string]string
 74. Тестовое задание
+75. Errors.Is() vs Errors.As()
+76. Race condition & data race
+77. Bubble sort
