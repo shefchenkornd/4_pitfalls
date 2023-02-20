@@ -10,7 +10,7 @@ Q: почему нельзя взять указатель на элемент m
 R: потому что может произойти эвакуация данных из bucket'a
 
 Q: почему порядок обхода случайный?
-R: при итерации по map'e авторы языка используют fastrand() или fastrand64() [генераторы случайных чисел] func mapiterinit(t *maptype, h *hmap, it *hiter
+R: при итерации по map'e авторы языка используют fastrand() или fastrand64() [генераторы случайных чисел]. Смотри func mapiterinit(t *maptype, h *hmap, it *hiter
 
 
 Внутри map есть buckets

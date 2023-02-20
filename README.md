@@ -123,6 +123,10 @@
 72. В языке Go нет наследования — есть только композиция (встраивание)
 73. Написать простенькую реализацию cache используя map[string]string
 74. Тестовое задание
-75. Errors.Is() vs Errors.As()
-76. Race condition & data race
-77. Bubble sort
+75. Bubble sort
+76. Errors.Is() vs Errors.As()
+77. Race condition & data race
+78. Проблема concurrency, многопоточности и параллелизма
+    1. deadlocks
+    2. livelocks
+    3. starvation
